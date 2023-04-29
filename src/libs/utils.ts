@@ -51,12 +51,9 @@ export const myWorks: workType[] = [
     heading: "Dazzle Landing Page",
     image: dazzle,
     tools: "Next.js, TailwindCSS, Framer Motions, HTML/CSS",
-    link: "https://netflixclone-segun.vercel.app/",
+    link: "https://dazzle-landing-demo.vercel.app/",
     github: "https://github.com/flamezbaba/dazzle-demo",
     ideas: [
-      "Movies Data fetch via TheMovieDB API",
-      "State Management handled with Redux",
-      "Integration Testing done with Cypress",
     ],
   },
   {
