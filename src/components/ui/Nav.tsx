@@ -55,7 +55,7 @@ const Nav: FC<props> = () => {
               </Link>
               <Link
                 onClick={() => setIsNavOpen(false)}
-                href="/cv.png" target="_blank"
+                href="/cv.pdf" target="_blank"
                 className="hover:scale-150 transition-all duration-500"
               >
                 Resume

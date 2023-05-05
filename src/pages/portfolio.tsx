@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { GrGithub } from "react-icons/gr";
@@ -7,8 +8,6 @@ import Button from "@/components/ui/Button";
 import Nav from "@/components/ui/Nav";
 import Footer from "@/components/Footer";
 import { cn, workType, myWorks, gloock } from "@/libs/utils";
-
-
 
 export default function Portfolio() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -21,12 +20,6 @@ export default function Portfolio() {
 
   const closeModal = () => {
     setModalOpen(false);
-  };
-
-  const openExternalLink = (link: string | undefined) => {
-    if (typeof link == "string") {
-      window.open(link, "_blank");
-    }
   };
 
   useEffect(() => {
@@ -74,24 +67,24 @@ export default function Portfolio() {
                     </div>
                     <div className="mt-5 mb-10 flex gap-5">
                       {currentProject.link != "" && (
-                        <Button
-                          onClick={() => openExternalLink(currentProject.link)}
-                          size="lg"
-                          className="text-sm py-4 px-6 font-light uppercase"
-                        >
-                          Project Link
-                        </Button>
+                        <Link href={currentProject.link} target="_blank">
+                          <Button
+                            size="lg"
+                            className="text-sm py-4 px-6 font-light uppercase"
+                          >
+                            Project Link
+                          </Button>
+                        </Link>
                       )}
                       {currentProject.github != "" && (
-                        <Button
-                          onClick={() =>
-                            openExternalLink(currentProject.github)
-                          }
-                          size="lg"
-                          className="text-sm py-4 px-6 font-light uppercase"
-                        >
-                          <GrGithub size={27} />
-                        </Button>
+                        <Link href={currentProject.github} target="_blank">
+                          <Button
+                            size="lg"
+                            className="text-sm py-3 px-6 font-light uppercase"
+                          >
+                            <GrGithub size={26} />
+                          </Button>
+                        </Link>
                       )}
                     </div>
                   </div>
@@ -130,9 +123,11 @@ export default function Portfolio() {
                     Preview
                   </Button>
                   {work.github != "" && (
-                    <div className="bg-white rounded-md text-[--main-color] px-2 py-1 cursor-pointer">
-                      <GrGithub onClick={() => openExternalLink(work.github)} />
-                    </div>
+                    <Link href={work.github} target="_blank"> 
+                      <div className="bg-white rounded-md text-[--main-color] px-2 py-1 cursor-pointer">
+                        <GrGithub />
+                      </div>
+                    </Link>
                   )}
                 </div>
               </div>

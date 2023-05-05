@@ -26,8 +26,8 @@ export interface workType {
   heading?: string;
   image?: any;
   tools?: any;
-  link?: string;
-  github?: string;
+  link?: any;
+  github?: any;
   ideas?: string[];
 }
 

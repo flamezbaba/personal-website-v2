@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC } from "react";
 import { cva, VariantProps } from "class-variance-authority";
-import { cn } from "@/libs/utils";
+import { cn } from "../../libs/cn";
 
 export const buttonVariants = cva(
   "inline-flex items-center justify-center rounded-md transition-color ease-linear duration-500",
@@ -9,7 +9,7 @@ export const buttonVariants = cva(
       variant: {
         primary:
           "bg-[#6a47ef] hover:bg-[#fffeff] text-[#fffeff] hover:text-[#6a47ef]",
-        secondary: "",
+        secondary: "bg-[#dc4b4b] hover:bg-[#fffeff] text-[#fffeff] hover:text-[#dc4b4b]",
       },
       size: {
         sm: "px-4 py-2",
@@ -29,7 +29,7 @@ export interface ButtonProps
      
     }
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   className,
   children,
   variant,

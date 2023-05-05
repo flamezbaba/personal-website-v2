@@ -1,10 +1,10 @@
-import {FC } from "react";
+import { FC } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Button from "@/components/ui/Button";
 import { cn, gloock, myWorks } from "@/libs/utils";
 import { GrGithub } from "react-icons/gr";
-
 
 interface props {}
 
@@ -37,13 +37,14 @@ const Portfolio: FC<props> = () => {
                 {work.title}
               </div>
               <div className="flex items-center gap-2">
-                <Button
-                  onClick={() => router.push("/portfolio")}
-                  size="sm"
-                  className="text-sm py-1 px-6 font-light uppercase"
-                >
-                  Preview
-                </Button>
+                <Link href="/portfolio">
+                  <Button
+                    size="sm"
+                    className="text-sm py-1 px-6 font-light uppercase"
+                  >
+                    Preview
+                  </Button>
+                </Link>
                 {work.github != "" && (
                   <div className="bg-white rounded-md text-[--main-color] px-2 py-1 cursor-pointer">
                     <GrGithub onClick={() => router.push("/portfolio")} />
@@ -61,13 +62,11 @@ const Portfolio: FC<props> = () => {
         ))}
       </div>
       <div className="w-full flex justify-center items-center mt-10">
-        <Button
-          onClick={() => router.push("/portfolio")}
-          size="sm"
-          className="text-lg font-light capitalize"
-        >
-          View More
-        </Button>
+        <Link href="/portfolio">
+          <Button size="sm" className="text-lg font-light capitalize">
+            View More
+          </Button>
+        </Link>
       </div>
     </div>
   );
