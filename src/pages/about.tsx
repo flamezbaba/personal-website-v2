@@ -26,12 +26,12 @@ export default function About() {
             About Me
           </p>
         </div>
-        <div className="flex items-start flex-wrap gap-10 mt-10 w-[60%] md:w-full">
+        <div className="flex items-start justify-center flex-wrap gap-10 mt-10 w-[60%] md:w-full">
           <div className="w-[300px] h-[300px] ring-2 ring-[--main-color] rounded-lg">
             <Image src={myPic} alt="" className="w-full h-full rounded-lg" />
           </div>
           <div className="text-white flex-1 tracking-wider text-lg font-san font-thin">
-            I am Segun, a self-taught Full-Stack Web Developer with over five
+            I am Segun, a Full-Stack Web Developer with over five
             years of real-world experience building web applications that match
             client needs.
             <br />
