@@ -5,15 +5,16 @@ import { JsxElement } from "typescript";
 const meta: Meta<typeof Button> = {
   title: "component button",
   component: Button,
-  // argTypes: {
-  //   // variant: {
-  //   //   control: "variant",
-  //   // },
-  // },
+  argTypes: {
+    variant: {
+      control: {type: 'radio'},
+      options: ['primary', 'secondary']
+    },
+  },
 };
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
@@ -28,3 +29,8 @@ export const Secondary: Story = {
     variant: "secondary",
   },
 };
+
+export const Another: Story = {
+  render: (args) => <Button variant="secondary">i am another button</Button>
+};
+
