@@ -8,7 +8,7 @@ import { GrGithub } from "react-icons/gr";
 
 interface props {}
 
-const works = myWorks.slice(0, 3);
+const works = myWorks.slice(0, 6);
 
 const Portfolio: FC<props> = () => {
   const router = useRouter();
@@ -34,10 +34,10 @@ const Portfolio: FC<props> = () => {
                 onClick={() => router.push("/portfolio")}
                 className="ml-1 text-lg"
               >
-                {work.title}
+                {work.heading}
               </div>
               <div className="flex items-center gap-2">
-                <Link href="/portfolio">
+                <Link href={`/portfolio?name=${work.name}`}>
                   <Button
                     size="sm"
                     className="text-sm py-1 px-6 font-light uppercase"
@@ -47,14 +47,14 @@ const Portfolio: FC<props> = () => {
                 </Link>
                 {work.github != "" && (
                   <div className="bg-white rounded-md text-[--main-color] px-2 py-1 cursor-pointer">
-                    <GrGithub onClick={() => router.push("/portfolio")} />
+                    <GrGithub onClick={() => router.push(`/portfolio?name=${work.name}`)} />
                   </div>
                 )}
               </div>
             </div>
             <Image
-              onClick={() => router.push("/portfolio")}
-              src={work.image}
+              onClick={() => router.push(`/portfolio?name=${work.name}`)}
+              src={work.images[0]}
               className="rounded-2xl border-[1px] border-[--main-color] border-solid w-full h-full object-fill"
               alt=""
             />
@@ -62,7 +62,7 @@ const Portfolio: FC<props> = () => {
         ))}
       </div>
       <div className="w-full flex justify-center items-center mt-10">
-        <Link href="/portfolio">
+        <Link href={`/portfolio`}>
           <Button size="sm" className="text-lg font-light capitalize">
             View More
           </Button>

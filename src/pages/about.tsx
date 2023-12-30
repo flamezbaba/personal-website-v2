@@ -13,7 +13,7 @@ export default function About() {
       className={cn("flex flex-col gap-10 justify-start items-start relative")}
     >
       <Head>
-        <title>Sangosanya Segun</title>
+        <title>Elijah Segun</title>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </Head>
       <Nav />
@@ -31,7 +31,7 @@ export default function About() {
             <Image src={myPic} alt="" className="w-full h-full rounded-lg" />
           </div>
           <div className="text-white flex-1 tracking-wider text-lg font-san font-thin">
-            I am Segun, a Full-Stack Web Developer with over five
+            I am Elijah Segun, a Full-Stack Web Developer with over five
             years of real-world experience building web applications that match
             client needs.
             <br />

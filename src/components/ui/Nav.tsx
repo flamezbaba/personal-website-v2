@@ -19,7 +19,9 @@ const Nav: FC<props> = () => {
   return (
     <Fragment>
       <div className="w-full flex justify-between absolute top-0 left-0 px-[20px] py-[20px] md:py-[10px] text-white">
-        <Image src={signature} alt="" className="w-[100px]" />
+        <Link href="/">
+          <Image src={signature} alt="" className="w-[100px]" />
+        </Link>
         <IoIosMenu size={40} onClick={openNav} />
       </div>
       {isNavOpen && (

@@ -24,7 +24,7 @@ export default function Home() {
       )}
     >
       <Head>
-        <title>Sangosanya Segun</title>
+        <title>Elijah Segun</title>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </Head>
       <div className="fixed h-[400px] top-[20%] left-12 flex flex-col justify-center items-center md:hidden">

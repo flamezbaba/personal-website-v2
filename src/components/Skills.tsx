@@ -4,16 +4,17 @@ import { cn, gloock } from "@/libs/utils";
 interface props {}
 
 const frontEnd: string[] = [
-  "HTML, CSS, JS",
+  "HTML, CSS, Javascript",
   "TypeScript",
   "React.js, Next.js, Redux ToolKits, Styled-components",
   "Vue.js, Nuxt.js, Vuex, Pinia",
-  "SCSS, TailwindCSS, Framer Motion",
-  "Storybook, Cypress",
+  "SCSS, TailwindCSS, Bootstrap",
+  "Framer Motion, GSAP, Three.js",
+  "Storybook, Cypress, Jest",
 ];
 
 const backEnd: string[] = [
-  "PHP, Laravel",
+  "PHP, Laravel, Inertia JS",
   "NodeJs, Express",
   "MySQL, MongoDB, Firebase, GraphQL",
   "RESTApi",
