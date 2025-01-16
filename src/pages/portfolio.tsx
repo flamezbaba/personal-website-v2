@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GrGithub } from "react-icons/gr";
@@ -92,7 +92,7 @@ export default function Portfolio() {
                         {currentProject.images.map((i, index) => (
                           <div>
                             {/* <p>{i}</p> */}
-                            <img alt="" src={i.src} key={index} />
+                            <img alt="" src={i.src} key={index} style={{width: currentProject?.type == 'app' ? '250px': ''}}/>
                           </div>
                         ))}
                       </Carousel>
@@ -171,7 +171,7 @@ export default function Portfolio() {
             Portfolio
           </span>
         </div>
-        <div className="w-full flex md:flex-col justify-start items-start md:justify-center md:items-center flex-wrap px-[50px] md:px-0 gap-20 mt-20 text-white">
+        <div className="w-full grid grid-cols-3 md:grid-cols-1 px-[50px] md:px-0 gap-20 mt-20 text-white">
           {myWorks.map((work, index) => (
             <div
               key={index}

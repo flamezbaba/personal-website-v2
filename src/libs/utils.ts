@@ -2,20 +2,6 @@ import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import localFont from "next/font/local";
 
-import netflix from "public/works/netflix.png";
-import dazzle from "public/works/dazzle.png";
-import maris from "public/works/maris.png";
-import hmfinance from "public/works/hmfinance.png";
-import paami from "public/works/paami.png";
-import amazon from "public/works/amazon.png";
-import sunshine from "public/works/sunshine.png";
-import pos from "public/works/pos.png";
-import apex from "public/works/apex.png";
-import stakin from "public/works/stakin.png";
-import sms from "public/works/sms.png";
-import graphql from "public/works/graphql.png";
-import express from "public/works/express.png";
-
 export const gloock = localFont({ src: "../../public/Gloock-Regular.ttf" });
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -29,11 +15,56 @@ export interface workType {
   tools: string[];
   youtube?: string;
   link?: any;
+  type?: any;
   github?: any;
   services: string[];
 }
 
 export const myWorks: workType[] = [
+  {
+    name: "shride-landing",
+    heading: "Shride Landing Page",
+    writeup:
+      "This app allows users to book bikes for rides or delivery services, combining transportation and logistics.",
+    images: [
+      require("public/works/shride/1.png").default,
+      require("public/works/shride/2.png").default,
+    ],
+    tools: [
+      "React, Next.js",
+      "TailwindCSS",
+      "Framer Motion",
+    ],
+    link: "https://shrideapp.com/",
+    services: [
+      "Landing Page",
+      "Search Engine Optimization SEO",
+    ],
+  },
+  {
+    name: "shride-app",
+    heading: "Shride Mobile App",
+    writeup:
+      "This app allows users to book bikes for rides or delivery services, combining transportation and logistics.",
+    images: [
+      require("public/works/shride/app1.png").default,
+      require("public/works/shride/app3.png").default,
+      require("public/works/shride/app2.png").default,
+      require("public/works/shride/app4.png").default,
+    ],
+    tools: [
+      "React Native, Expo",
+      "Zustand",
+      "React Query",
+    ],
+    type: 'app',
+    link: "https://shrideapp.com/",
+    services: [
+      "Mobile App",
+      "Deployment to Google Play Store",
+      "Deployment to App Store",
+    ],
+  },
   {
     name: "treats",
     heading: "Treats By Beats",
@@ -83,6 +114,25 @@ export const myWorks: workType[] = [
     ],
   },
   {
+    name: "jhc",
+    heading: "Jesus House Cleveland",
+    writeup:
+      "Jesus House Cleveland church website.",
+    images: [
+      require("public/works/jesushousecleveland/1.png").default,
+      require("public/works/jesushousecleveland/2.png").default,
+      require("public/works/jesushousecleveland/3.png").default,
+    ],
+    tools: [
+      "wordpress",
+    ],
+    link: "https://jesushousecleveland.org",
+    services: [
+      "Church Website",
+      "Search Engine Optimization SEO",
+    ],
+  },
+  {
     name: "dreamcard",
     heading: "Dream Card Homes",
     writeup:
@@ -108,8 +158,8 @@ export const myWorks: workType[] = [
   },
   {
     name: "exodus",
-    heading: "Exodus Landing Page",
-    writeup: "Landing Page for a Tax Management Firm",
+    heading: "Exodus Website",
+    writeup: "Website for a Tax Management Firm",
     images: [
       require("public/works/exodus/1.png").default,
       require("public/works/exodus/2.png").default,

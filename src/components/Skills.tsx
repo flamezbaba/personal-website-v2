@@ -21,6 +21,13 @@ const backEnd: string[] = [
   "AWS, Vercel, Netlify, Digital Ocean",
 ];
 
+const mobileApp: string[] = [
+  "React Native",
+  "Expo",
+  "Zustand",
+  "React Query",
+];
+
 const Skills: FC<props> = () => {
   return (
     <div className="w-full flex flex-col justify-center pt-[50px] pb-[50px]">
@@ -63,6 +70,24 @@ const Skills: FC<props> = () => {
           </div>
           <div className="flex flex-col gap-3 mt-5">
             {backEnd.map((skill, index) => (
+              <span key={index} className="text-lg tracking-wider relative font-thin font-sans before:absolute before:top-[calc(40%)] before:left-[-20px] before:contents-[''] before:h-[10px] before:w-[10px] before:border-[2px] before:border-[--my-black] before:ring-white before:ring-1 before:bg-[--main-color] before:rounded-full">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col">
+          <div className="">
+            <span
+              className={cn(gloock.className, "text-3xl text-with-shadow")}
+              data-txt="03"
+            >
+              Mobile App Dev
+            </span>
+          </div>
+          <div className="flex flex-col gap-3 mt-5">
+            {mobileApp.map((skill, index) => (
               <span key={index} className="text-lg tracking-wider relative font-thin font-sans before:absolute before:top-[calc(40%)] before:left-[-20px] before:contents-[''] before:h-[10px] before:w-[10px] before:border-[2px] before:border-[--my-black] before:ring-white before:ring-1 before:bg-[--main-color] before:rounded-full">
                 {skill}
               </span>
