@@ -16,17 +16,12 @@ const frontEnd: string[] = [
 const backEnd: string[] = [
   "PHP, Laravel, Inertia JS",
   "NodeJs, Express",
-  "MySQL, MongoDB, Firebase, GraphQL",
-  "RESTApi",
+  "MySQL, MongoDB, Postgresql, Supabase, Firebase, GraphQL",
+  "RESTful API",
   "AWS, Vercel, Netlify, Digital Ocean",
 ];
 
-const mobileApp: string[] = [
-  "React Native",
-  "Expo",
-  "Zustand",
-  "React Query",
-];
+const mobileApp: string[] = ["React Native", "Expo", "Zustand", "React Query"];
 
 const Skills: FC<props> = () => {
   return (
@@ -40,7 +35,7 @@ const Skills: FC<props> = () => {
         </span>
       </div>
 
-      <div className="w-full flex md:flex-col md:px-[50px] justify-center gap-20 md:gap-12 items-start mt-10 text-white">
+      <div className="w-full flex md:flex-col md:px-[50px] justify-center gap-20 md:gap-12 items-start mt-20 text-white">
         <div className="flex flex-col justify-start items-start">
           <div className="">
             <span
@@ -52,7 +47,7 @@ const Skills: FC<props> = () => {
           </div>
           <div className="flex flex-col gap-3 mt-5">
             {frontEnd.map((skill, index) => (
-              <span key={index} className="text-lg tracking-wider  relative font-thin font-sans before:absolute before:top-[calc(40%)] before:left-[-20px] before:contents-[''] before:h-[10px] before:w-[10px] before:border-[2px] before:border-[--my-black] before:ring-white before:ring-1 before:bg-[--main-color] before:rounded-full">
+              <span key={index} className="my-skill-item">
                 {skill}
               </span>
             ))}
@@ -70,7 +65,7 @@ const Skills: FC<props> = () => {
           </div>
           <div className="flex flex-col gap-3 mt-5">
             {backEnd.map((skill, index) => (
-              <span key={index} className="text-lg tracking-wider relative font-thin font-sans before:absolute before:top-[calc(40%)] before:left-[-20px] before:contents-[''] before:h-[10px] before:w-[10px] before:border-[2px] before:border-[--my-black] before:ring-white before:ring-1 before:bg-[--main-color] before:rounded-full">
+              <span key={index} className="my-skill-item">
                 {skill}
               </span>
             ))}
@@ -88,7 +83,7 @@ const Skills: FC<props> = () => {
           </div>
           <div className="flex flex-col gap-3 mt-5">
             {mobileApp.map((skill, index) => (
-              <span key={index} className="text-lg tracking-wider relative font-thin font-sans before:absolute before:top-[calc(40%)] before:left-[-20px] before:contents-[''] before:h-[10px] before:w-[10px] before:border-[2px] before:border-[--my-black] before:ring-white before:ring-1 before:bg-[--main-color] before:rounded-full">
+              <span key={index} className="my-skill-item">
                 {skill}
               </span>
             ))}

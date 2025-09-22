@@ -12,12 +12,14 @@ export interface workType {
   heading?: string;
   writeup: string;
   images: any[];
+  highlights?: any[];
   tools: string[];
   youtube?: string;
   link?: any;
   type?: any;
   github?: any;
   services: string[];
+  stackImages?: string[];
 }
 
 export const myWorks: workType[] = [
@@ -27,43 +29,208 @@ export const myWorks: workType[] = [
     writeup:
       "This app allows users to book bikes for rides or delivery services, combining transportation and logistics.",
     images: [
-      require("public/works/shride/1.png").default,
-      require("public/works/shride/2.png").default,
+      require("public/works/shridelanding/11.png").default,
+      require("public/works/shridelanding/2.png").default,
+      require("public/works/shridelanding/33.png").default,
+      require("public/works/shridelanding/44.png").default,
     ],
-    tools: [
-      "React, Next.js",
-      "TailwindCSS",
-      "Framer Motion",
-    ],
+    tools: ["React", "Next.js", "TailwindCSS", "Framer Motion", "Lottie"],
     link: "https://shrideapp.com/",
-    services: [
-      "Landing Page",
-      "Search Engine Optimization SEO",
-    ],
+    services: ["Landing Page", "Search Engine Optimization SEO"],
+    stackImages: ["nextjs.png", "tailwind.png"],
   },
   {
-    name: "shride-app",
-    heading: "Shride Mobile App",
-    writeup:
-      "This app allows users to book bikes for rides or delivery services, combining transportation and logistics.",
-    images: [
-      require("public/works/shride/app1.png").default,
-      require("public/works/shride/app3.png").default,
-      require("public/works/shride/app2.png").default,
-      require("public/works/shride/app4.png").default,
+    name: "trippa-courier",
+    heading: "Trippa Courier App",
+    writeup: `
+        Start Delivering in Minutes
+        <br/>
+        <br/>
+        Download the Trippa Courier App and get instant access to delivery requests around you. Quick setup. Daily earnings. Full control.
+    `,
+    highlights: [
+      "Developed the app with React Native and Expo, shipping it to both iOS and Android.",
+      "Integrated Supabase for authentication, database, and backend services, keeping the stack lightweight yet powerful.",
+      "Built Supabase Edge Functions to send push notifications via FCM.",
+      "Built Supabase Edge Functions to handle direct rider bank withdrawals securely using Paystack.",
+      "Leveraged Supabase Realtime subscriptions to keep ride status, orders, and deliveries live and synced across devices.",
+      "Implemented error monitoring with Sentry, making debugging and production monitoring more efficient.",
+      "Integrated Google Maps SDK for navigation and route planning.",
+      "Designed a scalable architecture that allows extending services easily (e.g, adding new delivery types).",
+      "Seamlessly deployed to both Apple App Store and Google Play Store",
+      "Real-time order tracking with interactive map update",
     ],
-    tools: [
-      "React Native, Expo",
-      "Zustand",
-      "React Query",
-    ],
-    type: 'app',
+    images: [require("public/works/trippacourier/app1.png").default],
+    tools: ["React Native", "Expo", "Supabase", "Zustand"],
+    type: "app",
     link: "https://shrideapp.com/",
     services: [
       "Mobile App",
       "Deployment to Google Play Store",
       "Deployment to App Store",
     ],
+    stackImages: ["reactnative.png", "expo.png", "supabase.png"],
+  },
+  {
+    name: "usetrippa",
+    heading: "UseTrippa App",
+    writeup: `
+        Deliver more, spend less, grow faster.
+        <br/>
+        <br/>
+        Compare rates from riders, track in real-time, and deliver without stress.
+    `,
+    highlights: [
+      "Developed the app with React Native and Expo, shipping it to both iOS and Android.",
+      "Integrated Supabase for authentication, database, and backend services, keeping the stack lightweight yet powerful.",
+      "Built Supabase Edge Functions to send push notifications via FCM.",
+      "Built Supabase Edge Functions to handle users payment securely using Paystack.",
+      "Leveraged Supabase Realtime subscriptions to keep ride status, orders, and deliveries live and synced across devices.",
+      "Implemented error monitoring with Sentry, making debugging and production monitoring more efficient.",
+      "Integrated Google Maps SDK for navigation and route planning.",
+      "Designed a scalable architecture that allows extending services easily (e.g, adding new delivery types).",
+      "Seamlessly deployed to both Apple App Store and Google Play Store",
+    ],
+    images: [
+      require("public/works/usetrippa/app1.png").default,
+      require("public/works/usetrippa/app2.png").default,
+      require("public/works/usetrippa/app3.png").default,
+      require("public/works/usetrippa/app4.png").default,
+    ],
+    tools: ["React Native", "Expo", "Supabase", "Zustand"],
+    type: "app",
+    link: "https://trippaafrica.com/",
+    services: [
+      "Mobile App",
+      "Deployment to Google Play Store",
+      "Deployment to App Store",
+    ],
+    stackImages: ["reactnative.png", "expo.png", "supabase.png"],
+  },
+  {
+    name: "shride-merchant",
+    heading: "Merchant App",
+    writeup: `
+        Shride is a multi-service mobile app designed to simplify everyday transportation and delivery needs. 
+        <br/>
+        <br/>
+          Stores can conveniently:
+          <br/>
+          - Accept orders from users.
+          <br/>
+          - Process orders and hand over to riders with ease.
+          <br/>
+          <br/>
+    `,
+    highlights: [
+      "Engineered a mobile application using React Native and Expo.",
+      "Google Maps API for navigation and route optimization.",
+      "Mapbox for enhanced map visualization and custom styling.",
+      "Integrated React Query for efficient data fetching, caching, and synchronization.",
+      "Seamlessly deployed to both Apple App Store and Google Play Store",
+      "Real-time order tracking with interactive map update",
+    ],
+    images: [
+      require("public/works/shridemerchant/app1.jpg").default,
+      require("public/works/shridemerchant/app2.jpg").default,
+      require("public/works/shridemerchant/app3.jpg").default,
+      require("public/works/shridemerchant/app4.jpg").default,
+    ],
+    tools: ["React Native", "Expo", "Zustand", "React Query"],
+    type: "app",
+    link: "https://shrideapp.com/",
+    services: [
+      "Mobile App",
+      "Deployment to Google Play Store",
+      "Deployment to App Store",
+    ],
+    stackImages: ["reactnative.png", "expo.png"],
+  },
+  {
+    name: "shride-driver-app",
+    heading: "Shride Driver App",
+    writeup: `
+        Shride is a multi-service mobile app designed to simplify everyday transportation and delivery needs. 
+        <br/>
+        <br/>
+          Riders can conveniently:
+          <br/>
+          - Delivery food order.
+          <br/>
+          - Accept rides with trikes or bikes.
+          <br/>
+          - Make delivery of goods with ease.
+          <br/>
+          <br/>
+
+          By combining ride-hailing, food delivery, and logistics into a single app, Shride offers speed, reliability, and convenience in one seamless experience.
+    `,
+    highlights: [
+      "Engineered a mobile application using React Native and Expo.",
+      "Google Maps API for navigation and route optimization.",
+      "Mapbox for enhanced map visualization and custom styling.",
+      "Integrated React Query for efficient data fetching, caching, and synchronization.",
+      "Seamlessly deployed to both Apple App Store and Google Play Store",
+      "Real-time order tracking with interactive map update",
+    ],
+    images: [
+      require("public/works/shridedriver/app1.jpg").default,
+      require("public/works/shridedriver/app2.jpg").default,
+      require("public/works/shridedriver/app3.png").default,
+      require("public/works/shridedriver/app4.jpg").default,
+    ],
+    tools: ["React Native", "Expo", "Zustand", "React Query"],
+    type: "app",
+    link: "https://shrideapp.com/",
+    services: [
+      "Mobile App",
+      "Deployment to Google Play Store",
+      "Deployment to App Store",
+    ],
+    stackImages: ["reactnative.png", "expo.png"],
+  },
+  {
+    name: "shride-app",
+    heading: "Shride - Order a Ride & Food",
+    writeup: `
+        Shride is a multi-service mobile app designed to simplify everyday transportation and delivery needs. 
+        <br/>
+        <br/>
+          Users can conveniently:
+          <br/>
+          - Order food from their favorite restaurants.
+          <br/>
+          - Book rides with trikes or bikes for quick and affordable mobility.
+          <br/>
+          - Arrange deliveries for goods with ease.
+          <br/>
+          <br/>
+
+          By combining ride-hailing, food delivery, and logistics into a single app, Shride offers speed, reliability, and convenience in one seamless experience.
+    `,
+    highlights: [
+      "Engineered a mobile application using React Native and Expo.",
+      "Google Maps API for ride booking, navigation, and route optimization.",
+      "Mapbox for enhanced map visualization and custom styling.",
+      "Integrated React Query for efficient data fetching, caching, and synchronization.",
+      "Seamlessly deployed to both Apple App Store and Google Play Store",
+      "Real-time order tracking with interactive map update",
+    ],
+    images: [
+      require("public/works/shride/app1.jpg").default,
+      require("public/works/shride/app3.jpg").default,
+      require("public/works/shride/app2.jpg").default,
+      require("public/works/shride/app4.jpg").default,
+    ],
+    tools: ["React Native", "Expo", "Zustand", "React Query"],
+    type: "app",
+    link: "https://shrideapp.com/",
+    services: [
+      "Mobile App",
+      "Deployment to Google Play Store",
+      "Deployment to App Store",
+    ],
+    stackImages: ["reactnative.png", "expo.png"],
   },
   {
     name: "treats",
@@ -89,6 +256,7 @@ export const myWorks: workType[] = [
       "Search Engine Optimization SEO",
       "Stripe Payment integration",
     ],
+    stackImages: ["laravel.png", "livewire.png"],
   },
   {
     name: "maris",
@@ -112,25 +280,21 @@ export const myWorks: workType[] = [
       "Multi Payment system integration, Flutterwave and Paystack",
       "Apple Pay Payment Integration for payments on iPhone",
     ],
+    stackImages: ["vuejs.png", "laravel.png"],
   },
   {
     name: "jhc",
     heading: "Jesus House Cleveland",
-    writeup:
-      "Jesus House Cleveland church website.",
+    writeup: "Jesus House Cleveland church website.",
     images: [
       require("public/works/jesushousecleveland/1.png").default,
       require("public/works/jesushousecleveland/2.png").default,
       require("public/works/jesushousecleveland/3.png").default,
     ],
-    tools: [
-      "wordpress",
-    ],
+    tools: ["wordpress"],
     link: "https://jesushousecleveland.org",
-    services: [
-      "Church Website",
-      "Search Engine Optimization SEO",
-    ],
+    services: ["Church Website", "Search Engine Optimization SEO"],
+    stackImages: ["wordpress.png"],
   },
   {
     name: "dreamcard",
@@ -155,6 +319,7 @@ export const myWorks: workType[] = [
       "Admin Panel for total control of the website built with Laravel PHP For Backend, and inertia js Vuejs for page views",
       "Search Engine Optimization SEO",
     ],
+    stackImages: ["vuejs.png", "inertia.png", "laravel.png"],
   },
   {
     name: "exodus",
@@ -168,19 +333,20 @@ export const myWorks: workType[] = [
     tools: ["Laravel PHP", "HTML, CSS, Blade", "Bootstrap, JQuery"],
     link: "https://exodusprofessionals.com.ng",
     services: ["Landing Page", "Search Engine Optimization SEO"],
+    stackImages: ["laravel.png"],
   },
-  {
-    name: "meritline",
-    heading: "Meritline Cargo",
-    writeup: "Landing Page for Meritlinecargo",
-    images: [
-      require("public/works/meritline/1.png").default,
-      require("public/works/meritline/2.png").default,
-    ],
-    tools: ["HTML, CSS, JavaScript", "Bootstrap, JQuery"],
-    link: "https://meritlinecargo.com",
-    services: ["Landing Page", "Search Engine Optimization SEO"],
-  },
+  // {
+  //   name: "meritline",
+  //   heading: "Meritline Cargo",
+  //   writeup: "Landing Page for Meritlinecargo",
+  //   images: [
+  //     require("public/works/meritline/1.png").default,
+  //     require("public/works/meritline/2.png").default,
+  //   ],
+  //   tools: ["HTML, CSS, JavaScript", "Bootstrap, JQuery"],
+  //   link: "https://meritlinecargo.com",
+  //   services: ["Landing Page", "Search Engine Optimization SEO"],
+  // },
   {
     name: "dazzle",
     heading: "Dazzle Landing Page",
@@ -193,6 +359,7 @@ export const myWorks: workType[] = [
     link: "https://dazzle-landing-demo.vercel.app/",
     github: "https://github.com/flamezbaba/dazzle-demo",
     services: [],
+    stackImages: ["nextjs.png"],
   },
   {
     name: "openshop",
@@ -205,6 +372,7 @@ export const myWorks: workType[] = [
       "OpenShop GraphQL API Built with Express.js and GraphQL",
       "DataBase handled with MongoDB",
     ],
+    stackImages: ["expressjs.png", "mongodb.png", "graphql.png"],
   },
   {
     name: "ecommerceapi",
@@ -228,6 +396,7 @@ export const myWorks: workType[] = [
     link: "https://paami-flamezbaba-27f877.netlify.app/",
     github: "https://github.com/flamezbaba/paamidemo",
     services: [],
+    stackImages: ["react.png"],
   },
   {
     name: "amazon",
@@ -238,6 +407,7 @@ export const myWorks: workType[] = [
     link: "https://kind-raman-6df71e.netlify.app",
     github: "https://github.com/flamezbaba/amazondemo",
     services: [],
+    stackImages: ["react.png"],
   },
   {
     name: "netflix",
@@ -252,6 +422,7 @@ export const myWorks: workType[] = [
       "State Management handled with Redux",
       "Integration Testing done with Cypress",
     ],
+    stackImages: ["react.png"],
   },
   {
     name: "sunshine",
@@ -259,15 +430,10 @@ export const myWorks: workType[] = [
     writeup: "",
     images: [require("public/works/sunshine.png").default],
     youtube: "h2hbnPruRkI",
-    tools: [
-      "Laravel PHP and MySQL",
-      "HTML, CSS, Bootstrap",
-      "JQuery",
-    ],
+    tools: ["Laravel PHP and MySQL", "HTML, CSS, Bootstrap", "JQuery"],
     link: "https://sunshineschools.sch.ng/",
-    services: [
-      
-    ],
+    services: [],
+    stackImages: ["laravel.png"],
   },
   {
     name: "afrogina",
@@ -277,39 +443,30 @@ export const myWorks: workType[] = [
       require("public/works/afrogina/1.png").default,
       require("public/works/afrogina/2.jpg").default,
     ],
-    tools: [
-      "HTML, CSS, Bootstrap",
-      "PHP, WordPress",
-    ],
+    tools: ["HTML, CSS, Bootstrap", "PHP, WordPress"],
     link: "https://afrogina.com",
-    services: [
-    ],
+    services: [],
+    stackImages: ["wordpress.png"],
   },
   {
     name: "chillcity",
     heading: "Chill City",
     writeup: "Drinks Store ECommerce Website",
-    images: [
-      require("public/works/chillcity.png").default,
-    ],
+    images: [require("public/works/chillcity.png").default],
     youtube: "QptPzCQR3CI",
-    tools: [
-      "HTML, CSS, Bootstrap",
-      "PHP, WordPress",
-    ],
-    services: [
-    ],
+    tools: ["HTML, CSS, Bootstrap", "PHP, WordPress"],
+    services: [],
+    stackImages: ["wordpress.png"],
   },
   {
     name: "sms",
     heading: "First-SMS",
     writeup: "School Management System",
-    images: [
-      require("public/works/sms.png").default,
-    ],
+    images: [require("public/works/sms.png").default],
     tools: ["Laravel PHP", "HTML, CSS, Blade", "Bootstrap, JQuery"],
     youtube: "2xjE00PwOfM",
     services: [],
+    stackImages: ["laravel.png"],
   },
 ];
 

@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --top-bg: rgba(105,71,239,0.6);
+  --top-bg: rgba(105, 71, 239, 0.6);
   --my-black: #121212;
   --my-black-second: #0f0f0f;
   --main-color: #6947ef;
@@ -25,17 +25,28 @@ body {
   background-color: var(--my-black);
 }
 
-.text-with-shadow{
+.text-with-shadow {
   position: relative;
 }
 
-.text-with-shadow::before{
-  color: var(--my-black);  
-  text-shadow: -1px -1px 0 #6947ef, 1px -1px 0 #6947ef, -1px 1px 0 #6947ef, 1px 1px 0 #6947ef;
+.text-with-shadow::before {
+  color: var(--my-black);
+  text-shadow: -1px -1px 0 #6947ef, 1px -1px 0 #6947ef, -1px 1px 0 #6947ef,
+    1px 1px 0 #6947ef;
   position: absolute;
   top: -10px;
   left: -10px;
   content: attr(data-txt);
   z-index: -300;
   word-break: keep-all;
+}
+
+@layer components {
+  .my-skill-item::before {
+    @apply absolute top-[calc(36%)] left-[-20px] content-[''] h-[10px] w-[10px] border-[2px] border-[--my-black] ring-white ring-1 bg-[--main-color] rounded-full;
+  }
+
+  .my-skill-item {
+    @apply text-lg tracking-wider relative font-thin;
+  }
 }

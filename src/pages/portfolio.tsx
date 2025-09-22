@@ -11,6 +11,7 @@ import Button from "@/components/ui/Button";
 import Nav from "@/components/ui/Nav";
 import Footer from "@/components/Footer";
 import { cn, workType, myWorks, gloock } from "@/libs/utils";
+import PortfolioItem from "@/components/PortfolioItem";
 
 export default function Portfolio() {
   const router = useRouter();
@@ -34,6 +35,7 @@ export default function Portfolio() {
 
   const closeModal = () => {
     setModalOpen(false);
+    router.push("/portfolio");
   };
 
   function findProject(name: string) {
@@ -72,11 +74,11 @@ export default function Portfolio() {
             <div className="w-full flex flex-col">
               <div className="w-full flex flex-col px-[40px] md:px-[20px] py-[20px] bg-[--my-black] text-white">
                 <div className="text-white flex justify-between items-center md:items-start">
-                  <div className="text-lg">{currentProject.heading}</div>
-                  <IoIosClose size={30} onClick={() => closeModal()} />
+                  <div className="text-xl">{currentProject.heading}</div>
+                  <IoIosClose size={40} onClick={() => closeModal()} className="cursor-pointer"/>
                 </div>
 
-                <div className="w-full  mt-10 md:mt-4">
+                <div className="w-full mt-20 md:mt-4">
                   <div className="w-full">
                     {currentProject.youtube ? (
                       <div className="mb-5">
@@ -92,7 +94,15 @@ export default function Portfolio() {
                         {currentProject.images.map((i, index) => (
                           <div>
                             {/* <p>{i}</p> */}
-                            <img alt="" src={i.src} key={index} style={{width: currentProject?.type == 'app' ? '250px': ''}}/>
+                            <img
+                              alt=""
+                              src={i.src}
+                              key={index}
+                              style={{
+                                width:
+                                  currentProject?.type == "app" ? "250px" : "",
+                              }}
+                            />
                           </div>
                         ))}
                       </Carousel>
@@ -108,22 +118,26 @@ export default function Portfolio() {
                   </div>
 
                   <div className="w-full mt-5">
-                    <p className="font-bold">Tech Stack & Tools</p>
-                    <ul className="mt-1 list-disc space-y-2 ml-8 md:ml-4 text-sm">
+                    <p className="font-bold text-xl">Tech Stack & Tools</p>
+
+                    <div className="w-full flex flex-wrap gap-5 mt-2">
                       {currentProject.tools?.map((tool, index) => (
-                        <li className="" key={index}>
+                        <div
+                          key={index}
+                          className="ring-1 ring-white px-5 py-2 rounded-full text-[12px]"
+                        >
                           {tool}
-                        </li>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
                   {currentProject.services.length > 0 && (
-                    <div className="w-full mt-5">
-                      <p className="font-bold text-[1rem]">Deliverables</p>
+                    <div className="w-full mt-10">
+                      <p className="font-bold text-xl">Project Highlights</p>
                       <ul className="mt-1 list-disc space-y-2 ml-8 md:ml-4 text-sm">
-                        {currentProject.services?.map((s, index) => (
-                          <li className="" key={index}>
+                        {currentProject?.highlights?.map((s, index) => (
+                          <li className="font-light text-sm" key={index}>
                             {s}
                           </li>
                         ))}
@@ -173,38 +187,7 @@ export default function Portfolio() {
         </div>
         <div className="w-full grid grid-cols-3 md:grid-cols-1 px-[50px] md:px-0 gap-20 mt-20 text-white">
           {myWorks.map((work, index) => (
-            <div
-              key={index}
-              className="w-[400px] md:w-[350px] ring-2 ring-[--main-color] h-[220px] px-[20px] py-[20px] rounded-2xl relative flex justify-center items-center"
-            >
-              <div className="flex items-center justify-between p-1 text-white font-sans absolute h-[40px] w-[90%] bg-gradient-to-b from-[--my-black] from-50% to-transparent rounded-2xl shadow-lg shadow-[--my-black] top-[-20px]">
-                <div onClick={() => openModal(index)} className="ml-1 text-lg">
-                  {work.heading}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Button
-                    onClick={() => openModal(index)}
-                    size="sm"
-                    className="text-sm py-1 px-6 font-light uppercase"
-                  >
-                    Preview
-                  </Button>
-                  {work.github && (
-                    <Link href={work.github} target="_blank">
-                      <div className="bg-white rounded-md text-[--main-color] px-2 py-1 cursor-pointer">
-                        <GrGithub />
-                      </div>
-                    </Link>
-                  )}
-                </div>
-              </div>
-              <Image
-                onClick={() => openModal(index)}
-                src={work.images[0]}
-                className="rounded-2xl border-[1px] border-[--main-color] border-solid w-full h-full object-cover"
-                alt=""
-              />
-            </div>
+            <PortfolioItem work={work} key={index} />
           ))}
         </div>
       </div>
