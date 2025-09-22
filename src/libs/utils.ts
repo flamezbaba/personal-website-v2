@@ -92,7 +92,7 @@ export const myWorks: workType[] = [
       "Seamlessly deployed to both Apple App Store and Google Play Store",
     ],
     images: [
-      require("public/works/usetrippa/app1.png").default,
+      require("public/works/usetrippa/app12.png").default,
       require("public/works/usetrippa/app2.png").default,
       require("public/works/usetrippa/app3.png").default,
       require("public/works/usetrippa/app4.png").default,
