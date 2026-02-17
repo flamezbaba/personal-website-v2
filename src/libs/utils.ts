@@ -61,7 +61,7 @@ export const myWorks: workType[] = [
       "Real-time order tracking with interactive map update",
     ],
     images: [require("public/works/trippacourier/app1.png").default],
-    tools: ["React Native", "Expo", "Supabase", "Zustand"],
+    tools: ["React Native", "Expo", "Supabase", "Zustand", "Push Notifications", "TypeScript", "OTA Updates"],
     type: "app",
     link: "https://shrideapp.com/",
     services: [
@@ -97,7 +97,7 @@ export const myWorks: workType[] = [
       require("public/works/usetrippa/app3.png").default,
       require("public/works/usetrippa/app4.png").default,
     ],
-    tools: ["React Native", "Expo", "Supabase", "Zustand"],
+    tools: ["React Native", "Expo", "Supabase", "Zustand", "Push Notifications", "TypeScript", "OTA Updates"],
     type: "app",
     link: "https://trippaafrica.com/",
     services: [
@@ -136,7 +136,7 @@ export const myWorks: workType[] = [
       require("public/works/shridemerchant/app3.jpg").default,
       require("public/works/shridemerchant/app4.jpg").default,
     ],
-    tools: ["React Native", "Expo", "Zustand", "React Query"],
+    tools: ["React Native", "Expo", "Zustand", "React Query", "Push Notifications", "TypeScript", "OTA Updates"],
     type: "app",
     link: "https://shrideapp.com/",
     services: [
@@ -179,7 +179,7 @@ export const myWorks: workType[] = [
       require("public/works/shridedriver/app3.png").default,
       require("public/works/shridedriver/app4.jpg").default,
     ],
-    tools: ["React Native", "Expo", "Zustand", "React Query"],
+    tools: ["React Native", "Expo", "Zustand", "React Query", "Push Notifications", "TypeScript", "OTA Updates"],
     type: "app",
     link: "https://shrideapp.com/",
     services: [
@@ -222,7 +222,7 @@ export const myWorks: workType[] = [
       require("public/works/shride/app2.jpg").default,
       require("public/works/shride/app4.jpg").default,
     ],
-    tools: ["React Native", "Expo", "Zustand", "React Query"],
+    tools: ["React Native", "Expo", "Zustand", "React Query", "Push Notifications", "TypeScript", "OTA Updates"],
     type: "app",
     link: "https://shrideapp.com/",
     services: [
